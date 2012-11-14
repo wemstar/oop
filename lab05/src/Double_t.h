@@ -21,6 +21,6 @@ public:
 private:
 	double zmienna;
 };
-
+typedef Double_t value_type;
 #include "CountedPtr.h"
 #endif /* DOUBLE_T_H_ */

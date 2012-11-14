@@ -12,33 +12,18 @@
  *
  */
 
-class Double_t;
-class Int_t;
-
-#define INT_BASED_PTR
-#ifdef INT_BASED_PTR
-
-typedef Int_t value_type;
-
-#endif
-
-#ifdef DOUBLE_BASED_PTR
-
-typedef Double_t value_type;
-#endif
-
 class CountedPtr {
 public:
 	CountedPtr():wskaznik(0),licznik(0){}
-	CountedPtr(::value_type *a);
+	CountedPtr(value_type *a);
 	CountedPtr( const CountedPtr &sp);
 	~CountedPtr();
-	::value_type & operator*() const;
-	::value_type * operator->()const;
+	value_type & operator*() const;
+	value_type * operator->()const;
 	CountedPtr & operator=(  CountedPtr& a) ;
-	CountedPtr & operator =( ::value_type  *a);
+	CountedPtr & operator =( value_type  *a);
 private:
-	::value_type* wskaznik;
+	value_type* wskaznik;
 	int licznik;
 	void destruktor();
 };

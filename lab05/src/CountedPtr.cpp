@@ -5,12 +5,22 @@
  *      Author: wemstar
  */
 
+
+#define INT_BASED_PTR
+
+#ifdef INT_BASED_PTR
+  #include "Int_t.h"
+#endif
+
+#ifdef DOUBLE_BASED_PTR
+  #include "Double_t.h"
+#endif
 #include "CountedPtr.h"
 
 
-
-
- CountedPtr::CountedPtr(::value_type *a) :wskaznik(a) {
+ CountedPtr::CountedPtr(value_type *a)  {
+	 destruktor();
+	 wskaznik=a;
 
 	licznik++;
 }
@@ -19,11 +29,11 @@ CountedPtr::~CountedPtr() {
 	destruktor();
 }
 
-::value_type &CountedPtr::operator*() const
+value_type &CountedPtr::operator*() const
 {
 	return * wskaznik;
 }
-::value_type * CountedPtr::operator->() const
+value_type * CountedPtr::operator->() const
 {
 	return wskaznik;
 }
@@ -40,10 +50,11 @@ CountedPtr & CountedPtr::operator =( CountedPtr  &a)
 	}
 	return *this;
 }
-CountedPtr & CountedPtr::operator =( ::value_type  *a)
+CountedPtr & CountedPtr::operator =( value_type  *a)
 {
 	destruktor();
 	wskaznik=a;
+	licznik=0;
 
 	return *this;
 }
@@ -54,8 +65,8 @@ CountedPtr::CountedPtr( const CountedPtr &sp)  {
 }
 void CountedPtr::destruktor()
 {
-			--licznik;
-		if(!licznik)
+		--licznik;
+		if(licznik==0)
 		{
 			delete wskaznik;
 		}

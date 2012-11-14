@@ -21,7 +21,7 @@ public:
 private:
 	const int n;
 };
-
+typedef Int_t value_type;
 #include "CountedPtr.h"
 
 #endif /* INT_T_H_ */
