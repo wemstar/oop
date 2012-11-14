@@ -1,45 +1,44 @@
 #include "CountedPtr.h"
 namespace OOP {
 CountedPtr::CountedPtr(value_type* ptr) {
-	_no = new int(1);
+	_no = (1);
 	_ptr = ptr;
 }
 
 CountedPtr::CountedPtr(const CountedPtr& sm) {
-	_no = sm._no;
+	_licznik = sm._licznik;
 	_ptr = sm._ptr;
-	++*_no;
+	++_licznik;
 }
 
 CountedPtr& CountedPtr::operator=(CountedPtr& sm) {
 	if (this == &sm) 
 		return *this;
 	
-	if (_no) {
-		--*_no;
-		if (*_no == 0) {
+	if (_licznik) {
+		--_licznik;
+		if (_licznik == 0) {
 			delete _ptr;
 			_ptr = 0;
-			delete _no;
 			_no = 0;
 		}
 	}
 	
-	_no = sm._no;
+	_licznik = sm._licznik;
 	_ptr = sm._ptr;
-	++*_no;
+	++_licznik;
 	
 	return *this;
 }
 
 CountedPtr::~CountedPtr() {
-	if (_no) {
+	if (_licznik) {
 		
 		--*_no;
-		if (*_no == 0) {
+		if (*_licznik == 0) {
 			delete _ptr;
 			_ptr = 0;
-			delete _no;
+
 			_no = 0;
 		}
 	}
@@ -58,16 +57,15 @@ CountedPtr& CountedPtr::operator=(value_type* sm)
 			return *this;
 
 		if (_no) {
-			--*_no;
-			if (*_no == 0) {
+			--_licznik;
+			if (_licznik == 0) {
 				delete _ptr;
 				_ptr = 0;
-				delete _no;
-				_no = 0;
+				_licznik = 0;
 			}
 		}
 
-		_no = new int(1);
+		_licznik = 1;
 		_ptr = sm;
 
 
