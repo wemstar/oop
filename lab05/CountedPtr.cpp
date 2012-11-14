@@ -68,7 +68,7 @@ CountedPtr& CountedPtr::operator=(value_type* sm)
 		_licznik = 1;
 		_ptr = sm;
 
-
+s
 		return *this;
 
 }

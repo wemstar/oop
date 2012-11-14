@@ -120,6 +120,7 @@ Collaboration diagram for OOP::CountedPtr:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOOP_1_1CountedPtr.html#ae4ac1ddad6538a7281548fd57f5ce158">CountedPtr</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">konstruktor domyslny  <a href="#ae4ac1ddad6538a7281548fd57f5ce158"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOOP_1_1CountedPtr.html#a9e67f7da194834072589bca1dce8ccd1">CountedPtr</a> (<a class="el" href="namespaceOOP.html#a98bf9fa44d8f36499284c9d57c1958aa">value_type</a> *)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOOP_1_1CountedPtr.html#ac5c681d51cd855f36324c467a815618e">CountedPtr</a> (const <a class="el" href="classOOP_1_1CountedPtr.html">CountedPtr</a> &amp;sm)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classOOP_1_1CountedPtr.html">CountedPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOOP_1_1CountedPtr.html#a36dcaf2d0c344daccdee0a4a51f78728">operator=</a> (<a class="el" href="classOOP_1_1CountedPtr.html">CountedPtr</a> &amp;sm)</td></tr>
@@ -130,10 +131,11 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceOOP.html#a98bf9fa44d8f36499284c9d57c1958aa">value_type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOOP_1_1CountedPtr.html#a2bd5db7ffc59b7811e484c3e858950bd">_ptr</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOOP_1_1CountedPtr.html#a9d5241ddb1470e29311d70f8d8ac451b">_no</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOOP_1_1CountedPtr.html#af164c5e11320b91ea4744fe23c6c3d5b">_licznik</a></td></tr>
 <tr><td colspan="2"><h2><a name="friends"></a>
 Friends</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOOP_1_1CountedPtr.html#a8a63fdc403051bf98b236855584dbe57">print_tab_el</a> (const <a class="el" href="classOOP_1_1array.html">array</a> &amp;tab2)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcja zaprzyjaźnina  <a href="#a8a63fdc403051bf98b236855584dbe57"></a><br/></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae4ac1ddad6538a7281548fd57f5ce158"></a><!-- doxytag: member="OOP::CountedPtr::CountedPtr" ref="ae4ac1ddad6538a7281548fd57f5ce158" args="()" -->
@@ -149,6 +151,8 @@ Friends</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>konstruktor domyslny </p>
 
 </div>
 </div>
@@ -166,6 +170,7 @@ Friends</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>konstruktor konwertujący </p>
 
 </div>
 </div>
@@ -183,6 +188,7 @@ Friends</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>konstuktor kopiujący </p>
 
 </div>
 </div>
@@ -216,6 +222,7 @@ Friends</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>przyladowany operator dereferencji </p>
 
 </div>
 </div>
@@ -232,6 +239,7 @@ Friends</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>przeładowany operator dostępu </p>
 
 </div>
 </div>
@@ -249,6 +257,13 @@ Friends</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>operator przypisania </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sm</td><td>referencja do zmyślnego wskaźnika </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -266,6 +281,13 @@ Friends</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>operator przypisania </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sm</td><td>referencja do do typu wskazywanego </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -285,15 +307,18 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>funkcja zaprzyjaźnina </p>
+<p>/param tab2 referencja do elemnetu tablicy </p>
+
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a9d5241ddb1470e29311d70f8d8ac451b"></a><!-- doxytag: member="OOP::CountedPtr::_no" ref="a9d5241ddb1470e29311d70f8d8ac451b" args="" -->
+<a class="anchor" id="af164c5e11320b91ea4744fe23c6c3d5b"></a><!-- doxytag: member="OOP::CountedPtr::_licznik" ref="af164c5e11320b91ea4744fe23c6c3d5b" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int* <a class="el" href="classOOP_1_1CountedPtr.html#a9d5241ddb1470e29311d70f8d8ac451b">OOP::CountedPtr::_no</a><code> [private]</code></td>
+          <td class="memname">int <a class="el" href="classOOP_1_1CountedPtr.html#af164c5e11320b91ea4744fe23c6c3d5b">OOP::CountedPtr::_licznik</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -311,6 +336,7 @@ Friends</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>wskaznik na pokazywany typ </p>
 
 </div>
 </div>
@@ -336,7 +362,7 @@ Friends</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 14 2012 18:55:43 for Programowanieobiektowe by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Nov 14 2012 19:15:14 for Programowanieobiektowe by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
