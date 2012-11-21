@@ -7,13 +7,14 @@
 
 #ifndef ARRAY_H_
 #define ARRAY_H_
-
+#include "CountedPtr.h"
 namespace OOP {
 
 /*
  *
  */
 class BaseClass;
+class CountedPtr;
 class array {
 public:
 	friend void print_tab_el(const array &tab2);

@@ -4,7 +4,7 @@
  *  Created on: 14-11-2012
  *      Author: wemstar
  */
-#include "CountedPtr.h"
+
 #include "array.h"
 
 namespace OOP {

@@ -1,5 +1,6 @@
 #include "CountedPtr.h"
 namespace OOP {
+typedef BaseClass value_type;
 CountedPtr::CountedPtr(value_type* ptr) {
 	_no = (1);
 	_ptr = ptr;
