@@ -12,8 +12,8 @@
 
 namespace oop {
 
-/*
- *
+/*!
+ * SquenceContainer dziedziczy po Container ponieważ jest to pojemnik w którym dane mają swoja kolejność
  */
 class SquenceContainer: public oop::Container {
 public:

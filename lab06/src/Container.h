@@ -12,8 +12,8 @@
 
 namespace oop {
 
-/*
- *
+/*!
+ * klasa container dziedziczy po głównym przodku ponieważ każdy kontener jest rozserzonym obiektem
  */
 class Container: public oop::Object {
 public:

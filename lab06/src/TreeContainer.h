@@ -12,8 +12,8 @@
 
 namespace oop {
 
-/*
- *
+/*!
+ *  Klasa dziedziczy po Container ponieważ dane są ustawione jak drzewo
  */
 class TreeContainer: public oop::Container {
 public:

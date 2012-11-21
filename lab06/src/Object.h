@@ -12,8 +12,9 @@
 #include <iostream>
 namespace oop {
 
-/*
+/*!
  *
+ * Główny obiekt przodek
  */
 class Object {
 public:
