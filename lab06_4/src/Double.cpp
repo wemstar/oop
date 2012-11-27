@@ -19,10 +19,11 @@ Double::~Double() {
 }
 void Double::wypisz()const
 {
-	cout << wart << " ";
+	cout << wart << "   ";
 }
 Value * Double::clone()
 {
-
+	Double *tmp= new Double(wart);
+	return tmp;
 }
 } /* namespace oop */

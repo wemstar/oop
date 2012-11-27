@@ -15,7 +15,7 @@ namespace oop{
  ostream & operator <<(ostream & Out,const Vector & Val)
 {
 	 Val.wypisz();
-	 Out << "przeładowany operator";
+
 	 return Out;
 }
 }

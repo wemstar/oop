@@ -23,7 +23,8 @@ void Point::wypisz()const
 }
 Value * Point::clone()
 {
-
+	Point *tmp= new Point(_x,_y);
+	return tmp;
 }
 
 } /* namespace oop */

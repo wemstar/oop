@@ -15,15 +15,16 @@ String::String(string a):_Str_ing(a) {
 }
 
 String::~String() {
-	// TODO Auto-generated destructor stub
+
 }
 void String::wypisz() const
 {
-	//cout << _Str_ing <" ";
+	cout << _Str_ing <<" ";
 }
 Value * String::clone()
 {
-
+	String *tmp= new String(_Str_ing);
+	return tmp;
 }
 
 } /* namespace oop */

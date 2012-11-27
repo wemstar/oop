@@ -24,7 +24,9 @@ Vector::Vector(Value *a):_size(0),_poj(1) {
 
 Vector::~Vector() {
 
-	for(int i=0;i<_size;++i)delete _tab[i];
+	for(int i=0;i<_size;++i){delete _tab[i];
+	}
+
 	delete [] _tab;
 }
 void Vector::wypisz()const
@@ -44,7 +46,7 @@ Value * Vector::clone()
 	while(tmp->_poj<=_poj)tmp->resize();
 	for(int i=0;i<_size;++i)
 	{
-		tmp->push_back(_tab[i]);
+		tmp->push_back(_tab[i]->clone());
 	}
 	return tmp;
 
