@@ -8,8 +8,7 @@
 #ifndef LAB_H_
 #define LAB_H_
 #include "Vector.h"
-#include "Dobule.h"
-#include "Int.h"
+#include "Opakowanie.h"
 #include "BadIndexError.h"
 #include "VectorStandardError.h"
 class random
@@ -24,6 +23,7 @@ class exception_handler
 {
 public:
 	static void process(std::exception &e){
+	std::cout << e.what();
 
 	}
 };

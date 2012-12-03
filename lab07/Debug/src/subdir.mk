@@ -6,8 +6,6 @@
 CPP_SRCS += \
 ../src/BadIndexError.cpp \
 ../src/Container.cpp \
-../src/Dobule.cpp \
-../src/Int.cpp \
 ../src/Object.cpp \
 ../src/SquenceContainer.cpp \
 ../src/Vector.cpp \
@@ -17,8 +15,6 @@ CPP_SRCS += \
 OBJS += \
 ./src/BadIndexError.o \
 ./src/Container.o \
-./src/Dobule.o \
-./src/Int.o \
 ./src/Object.o \
 ./src/SquenceContainer.o \
 ./src/Vector.o \
@@ -28,8 +24,6 @@ OBJS += \
 CPP_DEPS += \
 ./src/BadIndexError.d \
 ./src/Container.d \
-./src/Dobule.d \
-./src/Int.d \
 ./src/Object.d \
 ./src/SquenceContainer.d \
 ./src/Vector.d \

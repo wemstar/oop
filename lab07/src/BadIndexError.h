@@ -17,6 +17,10 @@ namespace oop {
  */
 class BadIndexError: public oop::VectorStandardError {
 public:
+	virtual const char* what() const throw()
+	  {
+	    return "niepoprawny indeks \n";
+	  }
 
 };
 

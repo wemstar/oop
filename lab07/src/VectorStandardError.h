@@ -17,6 +17,10 @@ namespace oop {
  */
 class VectorStandardError: public std::exception {
 public:
+	virtual const char* what() const throw()
+	  {
+	    return "Błąd tablicy";
+	  }
 
 };
 

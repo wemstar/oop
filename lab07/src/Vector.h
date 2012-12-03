@@ -19,7 +19,7 @@ class Vector: public oop::SquenceContainer {
 public:
 	Vector(int a=1);
 	virtual ~Vector();
-	void resize();
+	void resize(int delta=0);
 	virtual void push_back(Object *);
 	virtual void push_front(Object *);
 	Object * operator[](int n);

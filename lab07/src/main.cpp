@@ -23,15 +23,20 @@ int main(int argc, char** argv)
 
           for(int i = 0; i < random::get(10,20); ++i) // pseudolosowa z przedziaĹu [10, 20) - uĹźywa rand
           {
-                  v.push_front(new Dobule(1.0 + i)); //wstawia na poczatek
-                  v.push_back(new Int(100 + i));     //wstawia na koniec
+                  v.push_front(new Dobule(1.5 + i)); //wstawia na poczatek
+                  v.push_back(new Int(100 + i));
+                  	  //wstawia na koniec
           }
+
 
           for(int i = 0; i < 5;)
           {
+
             try
             {
-            	(v[random::get(60)])->print(); //wypisuje wartoĹ z pod indeksu [random::get(60)] przedzial [0,60)
+            	(v[random::get(60)])->print();
+            	//wypisuje wartoĹ z pod indeksu [random::get(60)] przedzial [0,60)
+
             }
             CATCH_EXCEPTION_BAD_INDEX
             {
