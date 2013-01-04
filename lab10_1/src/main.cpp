@@ -2,7 +2,7 @@
 //napisać zadanie które skopiuje obiekty (lub ich wskaźniki) typów POD za pomocą memcpy a resztę operatorem=;
 //integralną częścią zadania jest plik nagłówkowy
 
-#include "lab.h"
+#include "lab.hpp"
 
 int main(int argc, char** argv)
 {
