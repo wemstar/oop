@@ -60,7 +60,7 @@
       }
     }
 
-    /*Wynik dziĹania
+    /*Wynik dziĹania c
     SmartPtr<int, NoCopy<int> >: 1
     SmartPtr<int, RefCounted<int> >: 2
     SmartPtr<double, NoCopy<double> >: 3
