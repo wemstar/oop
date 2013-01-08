@@ -1,17 +1,13 @@
-/*
+
 /* W celu uzyskania ladnych nazw typow nalezy skorzystac z ponizszwgo kodu,
 odpowiednio go modyfikujac
-naglowek: <cxxabi.h>
-{
-int status;
-char *realname = abi::__cxa_demangle(GCC_TYPE_NAME, 0, 0, &status); // zwraca nazwe
-free(realname);
-}
-*/
+naglowek: */
+#include <cxxabi.h>
+
 
 #include "lab10.h"
 
-template<typename>
+template<typename T>
 struct is_const{static const bool value = 0;};
 
 template<typename T>
@@ -87,7 +83,7 @@ Type: std::string, object: test string, reference count: 1000
 Type: std::string, object: test string, reference count: 2
 Type: std::string, object: test string, reference count: 1
 Type: std::string, object: NULL, reference count: 0
-*/ * main.cpp
+*/ /* main.cpp
  *
  *  Created on: 03-01-2013
  *      Author: wemstar
