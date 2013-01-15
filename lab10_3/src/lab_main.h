@@ -15,7 +15,9 @@ template<typename T,int size>
 class static_array
 {
 public:
-	T & operator[](int n){}
+	T & operator[](int n){return _tab[n];}
+private:
+	int _tab[size];
 };
 class skip
 {
@@ -23,7 +25,7 @@ public:
 	skip(char znak,bool tryb=true):_znak(znak),_tryb(tryb){}
 	void operator()(std::istream & stream)const{
 		char c;
-		while(stream.get(c)&& c!=_znak);
+		while(stream.get(c)&&c!=_znak);
 
 	}
 private:

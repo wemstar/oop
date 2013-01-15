@@ -14,6 +14,7 @@
 
                     while(true)
                     {
+                    	std::cout<<argv[1]<<std::endl;
                             file >> x[0] >> skip(';') >> x[1] >> skip(';') >> x[2];
                             std::cout << x[0] << fill() << x[1] << fill('*', 30) << x[2] << std::endl;
                     }
